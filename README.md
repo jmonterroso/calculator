@@ -1,5 +1,6 @@
 # Senior tech test GFT
-
+# URL DEPLOYED ON HEROKU
+**URL:**  https://gft-test.herokuapp.com/
 ## Requirements
 
 1. Design a CashRegister  that allows you to make payment by passing “price”, “cash” and then calculates if the change due is available, if the amount is available then return “Change Due: $1.01” if it does not have sufficient cash then return “Insufficient Funds” and after paid is trigger then it returns “Closed”. Also you should be able to call square at the end of day, initial cash + sold amount it should equal totalAmount available.
