@@ -74,6 +74,22 @@ Utils.dom = {
             e.preventDefault();
             Utils.dom.printSquareValues(cashRegister.generateSquare());
         });
+
+        document.getElementById('pairWiseSubmit').addEventListener('click', function () {
+            var arr = document.getElementById('pairWiseArr').value;
+            var value = document.getElementById('valueToFind').value;
+            var array = arr.split(',');
+            for (var i in array) {
+                if (array.hasOwnProperty(i)) {
+                    array[i] = parseInt(array[i], 10); // Explicitly include base as per Álvaro's comment
+                }
+
+            }
+            var indexSum = pairWise.getPairs(array, parseInt(value, 10));
+            var pairsResult = document.getElementById('pairsResult');
+            pairsResult.innerHTML = 'The result of the indexes sum is: ' + indexSum;
+            pairsResult.classList.remove('hidden');
+        })
     }
 
 

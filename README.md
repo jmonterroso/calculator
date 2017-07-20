@@ -29,6 +29,7 @@ Value	7	9	11	13	15
 ## UI Screenshot
 
 ![Screenshot](0.png)
+![Screenshot](1.png)
 
 ## Features
 ### Register Cash
@@ -37,7 +38,11 @@ Value	7	9	11	13	15
 - Use Bootstrap to display the template
 - Updates and reduces the bills on every cash change.
 
+### Pair Wise
 
+- For Pair Wise algorithm check `/js/PairWise.js`
+- Adding array as a comma separated value in an input
+- Calculates and display in screen as a alert
 
 
 
