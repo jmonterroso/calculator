@@ -28,7 +28,7 @@ Value	7	9	11	13	15
 
 ## UI Screenshot
 
-![Screenshot](0.jpg)
+![Screenshot](0.png)
 
 ## Features
 ### Register Cash
