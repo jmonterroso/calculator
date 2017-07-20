@@ -6,23 +6,134 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 
 </head>
 <body>
-    <h1>Cash Register</h1>
-    <h2>Bioy</h2>
-    <p>Que hace</p>
 
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="form-horizontal" id="priceForm">
+                        <fieldset>
+
+                            <!-- Form Name -->
+                            <h2>Register price</h2>
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="price">Price</label>
+                                <div class="col-md-5">
+                                    <input required id="price" name="price" type="text" placeholder="Price"
+                                           class="form-control input-md">
+
+                                </div>
+                            </div>
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="cash">Cash</label>
+                                <div class="col-md-5">
+                                    <input required id="cash" name="cash" type="text" placeholder="Cash"
+                                           class="form-control input-md">
+
+                                </div>
+                            </div>
+
+                            <!-- Button -->
+                            <div class="form-group">
+
+                                <div class="col-md-12 ">
+
+                                    <button id="singlebutton" name="singlebutton" class="btn btn-primary btn-block">
+                                        Submit
+                                    </button>
+
+
+                                </div>
+                            </div>
+                            <div class="alert alert-danger hidden" id="alert"></div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <div id="closedState" class="alert alert-success hidden"><h4>Cash Register Successfully
+                            Closed</h4>
+                            <h5 class="hidden" id="changeDue"></h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <br>
+                <div class="col-sm-12">
+                    <button id="printSquare" name="singlebutton" class="btn btn-success btn-block">Print
+                        Square
+                    </button>
+                </div>
+                <hr>
+                <div id="squareReportTable" class="hidden">
+                    <h2>Square Report</h2>
+                    <table id="squareTable" class="table table-condensed table-hover">
+                        <thead>
+                        <tr>
+                            <th>Initial Balance</th>
+                            <th>Sells</th>
+                            <th>Current Balance</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <h2>Current Balance in Cash Register</h2>
+            <hr>
+            <table id="billTable" class="table table-condensed table-hover">
+                <thead>
+                <tr>
+                    <th>Bill</th>
+                    <th>Name</th>
+                    <th>Qty</th>
+                    <th>Value</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+
+
+</div>
 </body>
 <!-- Latest compiled and minified JavaScript -->
 <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
-<script src="build/main.bundle.js"></script>
+<!--<script src="build/main.bundle.js"></script>-->
+<script src="js/Calculator.js"></script>
+<script src="js/Utils.Calculator.js"></script>
+<script src="js/Main.js"></script>
 
 
 </html>
